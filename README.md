@@ -1,6 +1,6 @@
 # Ayün Awesome
 
-Default theme of the Ayün Linux distribution. Based on the theme designed by (elenapan)[https://github.com/elenapan] for ArchLabs.
+Default theme of the Ayün Linux distribution. Based on the theme designed by [elenapan](https://github.com/elenapan) for ArchLabs.
 
 ## Test it
 
