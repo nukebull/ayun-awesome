@@ -1,12 +1,23 @@
-# ArchLabs Awesome
-A customized AwesomeWM config meant to be used on a clean **ArchLabs** installation.
-It is in a usable state but still a **work in progress**!
-Please do not hesitate to open an issue if you encounter bugs or if you have any suggestion for this theme.
+# Ayün Awesome
 
-## Installation
-After installing ArchLabs:
+Default theme of the Ayün Linux distribution. Based on the theme designed by (elenapan)[https://github.com/elenapan] for ArchLabs.
+
+## Test it
+
+After installing Arch Linux:
 ```shell
-sudo pacman -S awesome pamac inotify-tools git # Install needed software
+sudo pacman -S awesome inotify-tools git # Install needed software
+```
+The `pamac` package is required, which is no longer available in the official repositories. This requires some AUR Helper. You can install `yay` as follows, then install the `pamac-aur` package from the AUR:
+
+```shell
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+yay -S pamac-aur
+```
+
+```shell
 git clone https://github.com/elenapan/archlabs-awesome.git
 cp -rT archlabs-awesome ~ # Copy files to home directory. WARNING: THIS WILL OVERWRITE EXISTING FILES!
 xrdb ~/.Xresources # Load xrdb settings
@@ -22,24 +33,5 @@ rm ~/.git ~/screenshots # Delete the repo's non needed folders
 
    Monitors power supply status (plugged/unplugged) in order to update the battery widget icon.
 
-## TODOs in order of priority
-- Calendar widget
-- Layout indicator widget
-- `hjkl` equivalent keybinds for all arrow keybinds
-- Update button: add text or tooltip (e.g. '34 packages need to be updated')
-- Update button: icon and color should change depending on whether or not there are any updates
-- Generate window buttons dynamically instead of using images (will allow buttons to change color according to the xrdb colors)
-- Volume notifications
-- Network widget should change icon depending on type of connection (wired/wireless)
-- Add night mode widget (will require `redshift` or `clight` to be installed)
-- Test sidebar with multiple monitors
-- Prettier right click menu
-- Check if garbage collection can be done with a Lua timer instead of awful.widget.watch
-- Remove (if titlebar buttons provide that info) or prettify tasklist client modifiers (floating, ontop, etc)
-- Alt tab widget (in order to justify removing bottom bar and increase available vertical space)
-- Clean up code (remove TODOs and random notes)
-
 ## Screenshot previews
-![Screenshot](./screenshots/ss2.png?raw=true)
-![Screenshot](./screenshots/ss3.png?raw=true)
-![Screenshot](./screenshots/ss1.png?raw=true)
+
