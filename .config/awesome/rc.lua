@@ -49,7 +49,7 @@ end
 -------------  Variable definitions  ----------------
 -----------------------------------------------------
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/archlabs/theme.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/ayun/theme.lua")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
 
@@ -164,9 +164,9 @@ end
 ----------------  Extra Features  -------------------
 -----------------------------------------------------
 local icons = require("icons.icons")
-require("archlabs-extras.exit_screen")
-require("archlabs-extras.sidebar")
--- local app_drawer = require("archlabs-extras.app_drawer")
+require("ayun-extras.exit_screen")
+require("ayun-extras.sidebar")
+-- local app_drawer = require("ayun-extras.app_drawer")
 
 -----------------------------------------------------
 -----------------   Notifications  ------------------
@@ -234,7 +234,7 @@ myawesomemenu = {
    { "Quit", function() exit_screen_show() end },
 }
 
-mymainmenu = awful.menu({ items = { { "Awesome", myawesomemenu, icons.archlabs },
+mymainmenu = awful.menu({ items = { { "Awesome", myawesomemenu, icons.ayun },
                                     { "Web Browser", web_browser },
                                     { "File Manager", file_manager },
                                     { "Settings", "xfce4-settings-manager" },
@@ -250,7 +250,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 ----------------       Wibar       ------------------
 -----------------------------------------------------
 -- Create a launcher
--- mylauncher = awful.widget.launcher({ image = icons.archlabs,
+-- mylauncher = awful.widget.launcher({ image = icons.ayun,
 --                                      menu = mymainmenu })
 
 -- Create a keyboard map indicator and switcher
@@ -396,7 +396,7 @@ myupdatewidget:buttons(gears.table.join(
 add_clickable_effect(myupdatewidget)
 
 -- Create a battey widget
-battery_text = require("archlabs-extras.battery")
+battery_text = require("ayun-extras.battery")
 battery_text.valign = "center"
 battery_text.align = "center"
 
@@ -887,7 +887,7 @@ globalkeys = gears.table.join(
     awful.key({ "Control",           }, "space", function () naughty.destroy_all_notifications() end,
               {description = "dismiss notifications", group = "awesome"}),
     awful.key({  }, "Print", function ()
-        awful.spawn("scrot '%S.png' -e 'mv $f $$(xdg-user-dir PICTURES)/ArchLabs-%S-$wx$h.png ; feh --scale-down -B black $$(xdg-user-dir PICTURES)/ArchLabs-%S-$wx$h.png'")
+        awful.spawn("scrot '%S.png' -e 'mv $f $$(xdg-user-dir PICTURES)/ayun-%S-$wx$h.png ; feh --scale-down -B black $$(xdg-user-dir PICTURES)/ayun-%S-$wx$h.png'")
         naughty.notify({ text = "Screenshot taken", icon = icons.camera })
     end,
               {description = "take screenshot", group = "launcher"}),

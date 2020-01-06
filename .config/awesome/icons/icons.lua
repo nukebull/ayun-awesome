@@ -4,7 +4,7 @@ local icons = {}
 -- Set icon path prefix
 local i = gears.filesystem.get_configuration_dir() .. "icons/"
 
-icons.archlabs = i .. "archlabs.png"
+icons.ayun = i .. "ayun.png"
 icons.web_browser = i .. "web_browser.svg"
 icons.camera = i .. "camera.svg"
 

@@ -1,9 +1,10 @@
 --[[
- ▄▄▄· ▄▄▄   ▄▄·  ▄ .▄▄▄▌   ▄▄▄· ▄▄▄▄· .▄▄ ·
-▐█ ▀█ ▀▄ █·▐█ ▌▪██▪▐███•  ▐█ ▀█ ▐█ ▀█▪▐█ ▀.
-▄█▀▀█ ▐▀▀▄ ██ ▄▄██▀▐███▪  ▄█▀▀█ ▐█▀▀█▄▄▀▀▀█▄
-▐█ ▪▐▌▐█•█▌▐███▌██▌▐▀▐█▌▐▌▐█ ▪▐▌██▄▪▐█▐█▄▪▐█
- ▀  ▀ .▀  ▀·▀▀▀ ▀▀▀ ·.▀▀▀  ▀  ▀ ·▀▀▀▀  ▀▀▀▀
+   _
+  /_\  _   _ _   _ _ __
+ //_\\| | | | | | | '_ \
+/  _  \ |_| | |_| | | | |
+\_/ \_/\__, |\__,_|_| |_|
+       |___/
 --]]
 
 local theme_assets = require("beautiful.theme_assets")
@@ -17,7 +18,7 @@ local themes_path = gfs.get_themes_dir()
 -- Inherit default theme
 local theme = dofile(themes_path.."default/theme.lua")
 -- Titlebar icon path
-local tip = "~/.config/awesome/themes/archlabs/titlebar/"
+local tip = "~/.config/awesome/themes/ayun/titlebar/"
 
 theme.wallpaper = gears.filesystem.get_configuration_dir() .. "wallpapers/minimal_space.png"
 
@@ -187,7 +188,7 @@ theme.menu_bg_focus = theme.xcolor4
 theme.menu_fg_focus = theme.xcolor7
 theme.menu_bg_normal = theme.xbackground
 theme.menu_fg_normal = theme.xcolor7
-theme.menu_submenu_icon = "~/.config/awesome/themes/archlabs/submenu.png"
+theme.menu_submenu_icon = "~/.config/awesome/themes/ayun/submenu.png"
 theme.menu_height = dpi(30)
 theme.menu_width  = dpi(180)
 theme.menu_border_color  = theme.xbackground

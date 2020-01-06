@@ -55,14 +55,14 @@ local function format_progress_bar(bar, icon)
     return w
 end
 
-local archlabs_icon = wibox.widget.imagebox(icons.archlabs)
-archlabs_icon.resize = true
-archlabs_icon.forced_width = dpi(200)
-archlabs_icon.forced_height = dpi(200)
-local archlabs = wibox.widget {
-    -- Center archlabs_icon horizontally
+local ayun_icon = wibox.widget.imagebox(icons.ayun)
+ayun_icon.resize = true
+ayun_icon.forced_width = dpi(200)
+ayun_icon.forced_height = dpi(200)
+local ayun = wibox.widget {
+    -- Center ayun_icon horizontally
     nil,
-    archlabs_icon,
+    ayun_icon,
     expand = "none",
     layout = wibox.layout.align.horizontal
 }
@@ -94,7 +94,7 @@ exit:buttons(gears.table.join(
 
 add_clickable_effect(exit)
 
--- local weather_widget = require("archlabs-extras.weather")
+-- local weather_widget = require("ayun-extras.weather")
 -- local weather_widget_icon = weather_widget:get_all_children()[1]
 -- weather_widget_icon.forced_width = icon_size
 -- weather_widget_icon.forced_height = icon_size
@@ -114,7 +114,7 @@ add_clickable_effect(exit)
 -- }
 
 local temperature_icon = wibox.widget.textbox("")
-local temperature_bar = require("archlabs-extras.temperature_bar")
+local temperature_bar = require("ayun-extras.temperature_bar")
 local temperature = format_progress_bar(temperature_bar, temperature_icon)
 
 local battery_icon = wibox.widget.textbox("")
@@ -126,7 +126,7 @@ awesome.connect_signal(
   "charger_unplugged", function(c)
     battery_icon.image = beautiful.battery_icon
 end)
-local battery_bar = require("archlabs-extras.battery_bar")
+local battery_bar = require("ayun-extras.battery_bar")
 local battery = format_progress_bar(battery_bar, battery_icon)
 battery:buttons(
   gears.table.join(
@@ -140,7 +140,7 @@ battery:buttons(
 add_clickable_effect(battery)
 
 local cpu_icon = wibox.widget.textbox("")
-local cpu_bar = require("archlabs-extras.cpu_bar")
+local cpu_bar = require("ayun-extras.cpu_bar")
 local cpu = format_progress_bar(cpu_bar, cpu_icon)
 
 cpu:buttons(
@@ -160,7 +160,7 @@ cpu:buttons(
 ))
 
 local ram_icon = wibox.widget.textbox("")
-local ram_bar = require("archlabs-extras.ram_bar")
+local ram_bar = require("ayun-extras.ram_bar")
 local ram = format_progress_bar(ram_bar, ram_icon)
 
 ram:buttons(
@@ -229,9 +229,9 @@ local date = wibox.widget {
     layout = wibox.layout.align.horizontal
 }
 
-local disk_space = require("archlabs-extras.disk")
+local disk_space = require("ayun-extras.disk")
 disk_space.font = "sans 14"
-local disk_icon = wibox.widget.imagebox(icons.archlabs)
+local disk_icon = wibox.widget.imagebox(icons.ayun)
 disk_icon.resize = true
 disk_icon.forced_width = icon_size
 disk_icon.forced_height = icon_size
@@ -254,7 +254,7 @@ disk:buttons(gears.table.join(
 ))
 
 local volume_icon = wibox.widget.textbox("")
-local volume_bar = require("archlabs-extras.volume_bar")
+local volume_bar = require("ayun-extras.volume_bar")
 volume = format_progress_bar(volume_bar, volume_icon)
 
 volume:buttons(gears.table.join(
@@ -347,7 +347,7 @@ sidebar:setup {
   { ----------- TOP GROUP -----------
     pad(1),
     pad(1),
-    archlabs,
+    ayun,
     pad(1),
     time,
     date,
