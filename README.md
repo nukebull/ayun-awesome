@@ -18,8 +18,8 @@ yay -S pamac-aur
 ```
 
 ```shell
-git clone https://github.com/elenapan/archlabs-awesome.git
-cp -rT archlabs-awesome ~ # Copy files to home directory. WARNING: THIS WILL OVERWRITE EXISTING FILES!
+git clone https://github.com/Ayun-Linux/ayun-awesome.git
+cp -rT ayun-awesome ~ # Copy files to home directory. WARNING: THIS WILL OVERWRITE EXISTING FILES!
 xrdb ~/.Xresources # Load xrdb settings
 fc-cache # Refresh font cache
 rm ~/.git ~/screenshots # Delete the repo's non needed folders
